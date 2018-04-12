@@ -23,6 +23,10 @@ app.post('/', function (req, res) {
 
 });
 
+app.get('/something', (req, res) => {
+    res.send('Something page');
+});
+
 app.all('/*', (req, res) => {
     res.send('Not found');
 });
