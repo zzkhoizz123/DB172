@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<title>Subjects-BKEdu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/css/About.css">
+<link rel="stylesheet" href="../Style/css/theme-black.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+  .partners{
+    display: flex;
+    height: auto;
+    background-color: white;
+  }
+  .image-row{
+    padding: 30px 0;
+    margin-left: 200px;
+    float: left;
+    background-color: white;
+  }
+
+  .image-row img{
+    width: 120px;
+  }
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+</style>
+<script>
+  var slideIndex = 4;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 4}
+    if (n < 4) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-2].style.display = "block";
+    slides[slideIndex-3].style.display = "block";
+    slides[slideIndex-4].style.display = "block";
+}
+</script>
+<body id="myPage">
+<!-- Navbar -->
+<% include ../partials/header.ejs %>
+
+<div class="w3-bar-item search-contrainer">
+  <form action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit">
+    <i class="fa fa-search"></i>
+    </button>
+  </form>
+</div>
+<a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal loginbut" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In/ Sign Up</a>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+  <a href="#team" class="w3-bar-item w3-button">Team</a>
+  <a href="#work" class="w3-bar-item w3-button">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  <a href="#" class="w3-bar-item w3-button">Search</a>
+</div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Subjects</h2>
+<p>choose subject if you want</p>
+
+<div class="w3-row"><br>
+<table class="w3-table">
+<tr>
+<th>
+<div class="card">
+  <img src="../Images/subjects/python.jpg" alt="John" style="width:60%">
+  <h1>Python</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <a href="/subject/lesson"><button>JOIN</button></p></a>
+</div>
+</th>
+
+<th>
+<div class="card">
+  <img src="../Images/subjects/java.png" alt="John" style="width:60%">
+  <h1>Java</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+
+<th>
+<div class="card">
+  <img src="../Images/subjects/dotnet.png" alt="John" style="width:60%">
+  <h1>.Net</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+
+<th>
+<div class="card">
+  <img src="../Images/subjects/php.png" alt="John" style="width:100%">
+  <br><br>
+  <h1>PHP</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+</tr>
+
+<tr>
+<th>
+
+
+<br>
+<br>
+<div class="card">
+  <img src="../Images/subjects/nodejs.png" alt="John" style="width:100%">
+  <br><br><h1>NodeJS</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+
+<th>
+
+<br>
+<br>
+<div class="card">
+  <img src="../Images/subjects/html.jpg" alt="John" style="width:90%">
+  <br><br>
+  <h1>HTML & CSS</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+
+<th>
+
+<br>
+<br>
+<div class="card">
+  <img src="../Images/subjects/Ruby.png" alt="John" style="width:52%">
+  <h1>.Net</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+
+<th>
+
+<br>
+<br>
+<div class="card">
+  <img src="../Images/subjects/C.png" alt="John" style="width:60%">
+  <h1>C++</h1>
+  <p class="title">Date</p>
+  <a href="#"><h5>Lecturer Name</h5></a>
+ <p><button>JOIN</button></p>
+</div>
+</th>
+</tr>
+
+</table>
+</div>
+</div>
+<br>
+<br>
+
+<h2 class="list-header">Working together</h2>
+<span style="margin-left:50px;font-family: 'Nanum Gothic', sans-serif;font-size:25px; color:#c2c2d6;">With the help of our partners, we bring technology skills to the masses.</span>
+<div class="partners">
+  <div class="image-row">
+    <img src="Logo/Adobe_logo.webp" alt="Logo Adobe">
+  </div>
+  <div class="image-row">
+    <img src="Logo/microsoft_logo.webp" alt="Logo Microsoft">
+  </div>
+  <div class="image-row">
+    <img src="Logo/oracle_logo.webp" alt="Logo Oracle">
+  </div>
+</div>
+<div class="partners">
+  <div class="image-row">
+    <img src="Logo/Google_logo.webp" alt="Logo Google">
+  </div>
+  <div class="image-row">
+    <img src="Logo/unity-logo.webp" alt="Logo Unity">
+  </div>
+  <div class="image-row">
+    <img src="Logo/stackof-logo.webp" alt="Logo StackOverFlow">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-google-plus-g"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <div class="cat-columns">
+
+    <div class="menu">
+      <ul>
+        <li class="plain">Courses</li>
+        <li><a href="#">Software Development</a></li>
+        <li><a href="#">Web Application</a></li>
+        <li><a href="#">Data Structure & Algorithm</a></li>
+        <li><a href="#">Data Profession</a></li>
+        <li><a href="#">Graphics</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Support</li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Company</li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Teach</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+</html>

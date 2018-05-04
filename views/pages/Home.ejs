@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<title>Home-BKEdu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/css/Home.css">
+<link rel="stylesheet" href="../Style/css/theme-black.css">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+<script>
+  var slideIndex = 4;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 4}
+    if (n < 4) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-2].style.display = "block";
+    slides[slideIndex-3].style.display = "block";
+    slides[slideIndex-4].style.display = "block";
+}
+</script>
+<body id="myPage">
+<!-- Navbar -->
+<% include ../partials/header.ejs %>
+
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+  <a href="#team" class="w3-bar-item w3-button">Team</a>
+  <a href="#work" class="w3-bar-item w3-button">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  <a href="#" class="w3-bar-item w3-button">Search</a>
+</div>
+</div>
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="..\Images\first_pic.jpg" alt="boat" style="width:auto;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <div class="content">
+      <p>Take the world's best courses,<br> online</p>
+    </div>
+    <button onclick="document.getElementById('id01').style.display='block'" style="color:#f15b2a; margin-left: 50px; margin-bottom: 50px;" class="w3-button w3-xlarge w3-theme w3-hover-teal"  title="Get Started">GET STARTED</button>
+  </div>
+</div>
+<!--Most Popular Courses -->
+<h2 class="list-header">Popular Courses</h3>
+<div class="rc-TallOfferingCards horizontal-box slick-initialized slick-slider">
+  <div class="slick-list">
+    <a class="prev" onclick="plusSlides(-1)" style="margin-left: 0">&#10094;</a>
+    <div class="slick-track">
+      <div class="card-column mySlides fade" style="display:block">
+        <a href="#"></a>
+        <div class="card">
+          <img src="../Images/Algorithm.png" alt="Algorithm" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Algorithm
+            </div>
+          </div>
+          <div class="card-footer">
+            5 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade" style="display:block">
+        <div class="card">
+          <img src="../Images/dotnetframework.png" alt=".Net Framework" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Dot Net Framework
+            </div>
+          </div>
+          <div class="card-footer">
+            5 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade" style="display:block">
+        <div class="card">
+          <img src="../Images/html-css.jpg" alt="HTML & CSS" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              HTML & CSS for Web Developers
+            </div>
+          </div>
+          <div class="card-footer">
+            3 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade" style="display:block" >
+        <div class="card">
+          <img src="../Images/photoshop.jpg" alt="Photoshop" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Blending Colors with Photoshop
+            </div>
+          </div>
+          <div class="card-footer">
+            6 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade">
+        <div class="card">
+          <img src="../Images/java.jpg" alt="Java" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Core for Java
+            </div>
+          </div>
+          <div class="card-footer">
+            8 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade">
+        <div class="card">
+          <img src="../Images/machinelearning.jpg" alt="Machine Learning" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Machine Learning
+            </div>
+          </div>
+          <div class="card-footer">
+            10 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade">
+        <div class="card">
+          <img src="../Images/Artificial-Intelligence.png" alt="Artificial Intelligence" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Artificial Intelligence
+            </div>
+          </div>
+          <div class="card-footer">
+            5 Courses
+          </div>
+        </div>
+      </div>
+
+      <div class="card-column mySlides fade">
+        <div class="card">
+          <img src="../Images/logo-python.png" alt="Python" class="card-imagine">
+          <div class="card-content">
+            <div class="card-partner">
+              HCM University Of Technology
+            </div>
+            <div class="card-namecourse">
+              Python
+            </div>
+          </div>
+          <div class="card-footer">
+            4 Courses
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>PRICING</h2>
+    <p>Choose a pricing plan that fits your needs.</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Free</p>
+        </li>
+        <li class="w3-padding-16"><b>30</b> Days Trial</li>
+        <li class="w3-padding-16"><b>5</b> Courses</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> Free</h2>
+          <span class="w3-opacity">trial</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Pro</p>
+        </li>
+        <li class="w3-padding-16"><b>30</b> Days</li>
+        <li class="w3-padding-16"><b>Unlimited</b> Courses</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 29$</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Premium</p>
+        </li>
+        <li class="w3-padding-16"><b>365</b> Days</li>
+        <li class="w3-padding-16"><b>Unlimited</b> Courses</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 299$</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Ho Chi Minh, VN</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  BkEdu@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<% include ../partials/footer.ejs %>
+
+</body>
+</html>

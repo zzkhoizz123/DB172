@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<title>About-BKEdu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/css/About.css">
+<link rel="stylesheet" href="../Style/css/theme-black.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+<style>
+  .glance{
+    display: flex;
+    height: 600px;
+    background: black;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  .glance-container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: stretch;
+  }
+  .glance-column{
+    width: 50%;
+  }
+  .glance-left{
+    background-repeat: no-repeat;
+  }
+  .glance-right{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+  }
+  .glance-tittle{
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    padding: 15px;
+    background: linear-gradient(110deg, #F15B2A , #E80A89);
+    position: absolute;
+    top: -33px;
+  }
+  .glance-right ul {
+    padding: 0;
+    margin: 0;
+  }
+  .glance-right ul li {
+    color: #aaaaaa;
+    font-size: 24px;
+    font-weight: 200;
+    padding: 10px 0;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+  .glance-right ul li span {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+  .glance-icon {
+    width: 45px;
+    margin-right: 20px;
+    float: left;
+  }
+  .partners{
+    display: flex;
+    height: auto;
+    background-color: white;
+  }
+  .image-row{
+    padding: 30px 0;
+    margin-left: 200px;
+    float: left;
+    background-color: white;
+  }
+
+  .image-row img{
+    width: 120px;
+  }
+
+</style>
+<script>
+  var slideIndex = 4;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 4}
+    if (n < 4) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-2].style.display = "block";
+    slides[slideIndex-3].style.display = "block";
+    slides[slideIndex-4].style.display = "block";
+}
+</script>
+<body id="myPage">
+<!-- Navbar -->
+
+<% include ../partials/header.ejs %>
+
+<div class="w3-bar-item search-contrainer">
+  <form action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit">
+    <i class="fa fa-search"></i>
+    </button>
+  </form>
+</div>
+<a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal loginbut" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In/ Sign Up</a>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+  <a href="#team" class="w3-bar-item w3-button">Team</a>
+  <a href="#work" class="w3-bar-item w3-button">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  <a href="#" class="w3-bar-item w3-button">Search</a>
+</div>
+</div>
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>OUR TEAM</h2>
+<p>Meet the team - our office rats:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="Images/Khoa_avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Nguyen Anh Khoa</h3>
+  <p>Web Designer</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="Images/Thao_avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Trinh Thi Thu Thao</h3>
+  <p>Support</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="Images/Khoi_avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Tran Dang Khoi</h3>
+  <p>Boss man</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="Images/Dinh_avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Tran Quoc Dinh</h3>
+  <p>Fixer</p>
+</div>
+
+
+</div>
+</div>
+<br>
+
+<div class="glance">
+  <div class="glance-container">
+    <div class="glance-left glance-column">
+      <img src="Images/about1.jpeg" alt="About us" style="height: 600px; width:700px;">
+    </div>
+    <div class="glance-right glance-column">
+      <div class="glance-tittle">
+        At a BkEdu
+      </div>
+      <ul>
+        <li>
+          <span class="glance-icon"><i class="fas fa-pencil-alt"></i></span>
+          <span>300+</span>&nbsp;expert authors
+        </li>
+        <li>
+          <span class="glance-icon"><i class="fas fa-book"></i></span>
+          <span>1500+</span>&nbsp;courses
+        </li>
+        <li>
+          <span class="glance-icon"><i class="fas fa-users"></i></span>
+          <span>400+</span>&nbsp;employees
+        </li>
+        <li>
+          <span class="glance-icon"><i class="fas fa-briefcase"></i></span>
+          Have &nbsp<span>70%</span>&nbsp;opportunities to get a good job
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 class="list-header">Working together</h2>
+<span style="margin-left:50px;font-family: 'Nanum Gothic', sans-serif;font-size:25px; color:#c2c2d6;">With the help of our partners, we bring technology skills to the masses.</span>
+<div class="partners">
+  <div class="image-row">
+    <img src="Logo/Adobe_logo.webp" alt="Logo Adobe">
+  </div>
+  <div class="image-row">
+    <img src="Logo/microsoft_logo.webp" alt="Logo Microsoft">
+  </div>
+  <div class="image-row">
+    <img src="Logo/oracle_logo.webp" alt="Logo Oracle">
+  </div>
+</div>
+<div class="partners">
+  <div class="image-row">
+    <img src="Logo/Google_logo.webp" alt="Logo Google">
+  </div>
+  <div class="image-row">
+    <img src="Logo/unity-logo.webp" alt="Logo Unity">
+  </div>
+  <div class="image-row">
+    <img src="Logo/stackof-logo.webp" alt="Logo StackOverFlow">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-google-plus-g"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <div class="cat-columns">
+
+    <div class="menu">
+      <ul>
+        <li class="plain">Courses</li>
+        <li><a href="#">Software Development</a></li>
+        <li><a href="#">Web Application</a></li>
+        <li><a href="#">Data Structure & Algorithm</a></li>
+        <li><a href="#">Data Profession</a></li>
+        <li><a href="#">Graphics</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Support</li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Company</li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Teach</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+</html>

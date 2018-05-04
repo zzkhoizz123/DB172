@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Login/Registration Form Transition</title>
-  
+
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../Style/css/Login.css">
 </head>
 
 <body>
 
   <p class="tip">Click on button in image container</p>
 
-
     <div class="cont">
             <div class="form sign-in">
-                <form action="/" method="POST" id="login_form">
+                <form action="/login" method="POST" id="login_form">
 
                     <h2>Welcome back,</h2>
                     <label>
@@ -34,11 +33,12 @@
         <button type="submit" class="submit" form="login_form">Sign In</button>
         <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
     </div>
- 
+
 
   <div class="sub-cont">
     <div class="img">
       <div class="img__text m--up">
+
         <h2>New here?</h2>
         <p>Sign up and discover great amount of new opportunities!</p>
       </div>
@@ -53,20 +53,22 @@
     </div>
 
     <div class="form sign-up">
+      <form action="/login/register" method="POST" id="reg_form">
       <h2>Time to feel like home,</h2>
       <label>
         <span>Name</span>
-        <input type="text" name=" username" />
+        <input type="text" name="username" />
       </label>
       <label>
         <span>Email</span>
-        <input type="email" />
+        <input type="email" name="userEmail" />
       </label>
       <label>
         <span>Password</span>
-        <input type="password" name="userpassword" />
+        <input type="password" name="userPassword" />
       </label>
-      <button type="button" class="submit">Sign Up</button>
+      </form>
+      <button type="submit" class="submit" form="reg_form">Sign Up</button>
       <button type="button" class="fb-btn">Join with <span>facebook</span></button>
     </div>
   </div>
@@ -78,13 +80,9 @@
 <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
   <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
 </a>
-  
-  
-
-    <script  src="js/index.js"></script>
 
 
-
+    <script  src="../Style/js/index.js"></script>
 
 </body>
 

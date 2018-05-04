@@ -1,34 +1,24 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+const path = require('path');
+//let router = express.Router();
+var homerouter = require('./router/home.js');
+var loginrouter = require('./router/login.js');
+var subjectrouter = require('./router/subject.js');
 
-var app = express();
-app.use(bodyParser());
-
+let app = express();
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(cookieParser('my secret here'));
 app.set('view engine', 'ejs');
-
 app.use(express.static(__dirname + '/views'));
-
-
-app.get('/', function (req, res) {
-    res.render('Home/Home'); // it will automatically read in file views : index.ejs
-});
-
-
-app.post('/', function (req, res) {
-    // console.log(req.body['userEmail']);
-    // console.log(req.body['userPassword']);
-    console.log(req.body);
- 
-    res.render('Home');
-
-});
-
-app.get('/something', (req, res) => {
-    res.send('Something page');
-});
+app.use('/subject', subjectrouter);
+app.use('/login', loginrouter);
+app.use('/', homerouter);
 
 app.all('/*', (req, res) => {
-    res.send('Not found');
+  res.send('Not found');
 });
 
-app.listen(3000); // this is port 
+app.listen(3000); // this is port
