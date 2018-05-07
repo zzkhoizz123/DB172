@@ -30,22 +30,22 @@
     </form>
   </div>
 
-  <% if(data.token != 'j:null'){%>
+  <% if(data.token != 'j:null' && data.token != null){%>
     <div class="w3-dropdown-hover w3-hide-small" style="position:absolute; right:60px;">
           <div class="w3-col s4" style="margin-top: 5px;">
-            <img src="../Images/Dinh_avatar.jpg" class="w3-circle w3-margin-right" style="width:46px">
+            <img src=<%=data.image%> class="w3-circle w3-margin-right" style="width:46px">
           </div>
           <button class="w3-button" title="Notifications"><%= data.name %> <i class="fa fa-caret-down"></i></button>
           <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-            <%var profile = "/profile/" + data.userID%>
-            <a href=<%=profile%> class="w3-bar-item w3-button">My Profile</a>
+
+            <a href="/profile" class="w3-bar-item w3-button">My Profile</a>
             <a href="#" class="w3-bar-item w3-button">Settings</a>
             <a href="#" class="w3-bar-item w3-button">Help Center</a>
             <a href="/profile/logout" class="w3-bar-item w3-button">Log Out</a>
           </div>
         </div>
   <%}%>
-  <%if(data.token == 'j:null'){%>
+  <%if(data.token == 'j:null' || data.token == null){%>
   <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal loginbut" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In/ Sign Up</a>
   <%}%>
 

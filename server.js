@@ -26,12 +26,15 @@ app.use('/*', (req, res, next) => {
   // query user name
   // query user id
   // query user image link
-
   if (!req.cookies.token) {
     res.cookie('token', null);
     res.cookie('userID', null);
     res.cookie('name', null);
-    console.log(req.header_data.token);
+    res.cookie('image', null);
+    console.log(req.cookies);
+
+  //  console.log(req.header_data.token);
+    req.header_data = {};
 
     next();
   }
@@ -39,6 +42,7 @@ app.use('/*', (req, res, next) => {
   else {
     // console.log(req.cookies);
     req.header_data = {};
+    req.header_data.image = req.cookies.image;
     req.header_data.name = req.cookies.name;
     req.header_data.userID = req.cookies.userID;
     req.header_data.token = req.cookies.token;

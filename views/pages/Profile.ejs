@@ -339,9 +339,9 @@
    </div>
    <div class="profile">
      <div class="tab">
-       <img src="../Images/Dinh_avatar.jpg" alt="Thao Trinh" style="width:50%;margin-left:auto;margin-right:auto;display:block;margin-bottom:20px" class="w3-circle w3-hover-opacity">
+       <img src=<%=user_info.Image%> alt="Thao Trinh" style="width:50%;margin-left:auto;margin-right:auto;display:block;margin-bottom:20px" class="w3-circle w3-hover-opacity">
        <div style="text-align:center; font-size:20px; margin-bottom:20px">
-         Dinh Tran
+         <%= user_info.Username%>
        </div>
        <button class="tablinks active" onclick="openTab(event, 'Overview')" id="defaultOpen" ><i class="fas fa-home mar icon"></i>Overview</button>
        <button class="tablinks" onclick="openTab(event, 'Account')"> <i class="fas fa-user icon"></i>Account</button>
@@ -358,31 +358,42 @@
          <div class="attribute-element">
            <label>Full name:</label>
            <div class="infotext" style="overflow:hidden; word-wrap: break-word;">
-                 TRAN QUOC DINH
+                 <%=user_info.Name%>
            </div>
          </div>
          <div class="attribute-element">
            <label>Birthday:</label>
            <div class="infotext">
-             23/12/1998
+             <%=user_info.DoB%>
            </div>
          </div>
          <div class="attribute-element">
            <label>Sex</label>
            <div class="infotext">
-             Male
+             <%if(user_info.Female == null){%>
+                 Other
+             <%}else if(user_info.Female == 1){%>
+                Female
+             <%}else{%>
+                 Male
+             <%}%>
+
            </div>
          </div>
          <div class="attribute-element">
-           <label>Country:</label>
+           <label>Email:</label>
            <div class="infotext">
-             Viet Nam
+             <%=user_info.Email%>
            </div>
          </div>
          <div class="attribute-element">
            <label>Career:</label>
            <div class="infotext">
-             Student
+             <% if(user_info.isTeacher == 0){ %>
+                 Student
+             <% }else{ %>
+                   Teacher
+              <% } %>
            </div>
          </div>
          <div class="attribute-element">
@@ -396,7 +407,7 @@
          <form id="frmPersonal" name="frmRegister" action onsubmit="return updatePersonal();" method="post">
            <div class="subcont" id="personal_edit">
              <div class="attribute-element">
-               <label>Full name:</label>
+               <label> Name:</label>
                <div class="infotext">
                  <input tabindex="1" type="text" name="fullname" value="TRAN QUOC DINH" maxlength="40"  class="subform_input updtinput">
                </div>
@@ -421,6 +432,7 @@
                <div class="infotext">
                  <label class="sexradio"><input tabindex="5" name="gender" type="radio" checked="" value="1"> Male</label>
                  <label class="sexradio"><input tabindex="6" name="gender" type="radio" value="0"> Female</label>
+                 <label class="sexradio"><input tabindex="7" name="gender" type="radio" value="2"> Other</label>
                </div>
              </div>
              <div class="attribute-element">
@@ -709,7 +721,7 @@
          <div class="attribute-element">
            <label>Username:</label>
            <div class="infotext">
-             herodotatop
+             <%=user_info.Username%>
            </div>
          </div>
          <div class="attribute-element">

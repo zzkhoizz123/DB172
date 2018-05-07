@@ -42,10 +42,11 @@ router.post('/', (req, res) => {
             return;
         }
 
+        console.log(data);
         res.cookie('token', data.token);
         res.cookie('name', name);
-        // res.cookie('image', data.image);
-        res.cookie('userID',data.ID);
+        res.cookie('image', data.image);
+        res.cookie('userID', 10);
         res.redirect('/');
     });
 });
