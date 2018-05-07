@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../Style/css/Home.css">
+    <link rel="stylesheet" href="../Style/css/About.css">
     <link rel="stylesheet" href="../Style/css/theme-black.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -324,7 +324,22 @@
   </head>
   <body id="myPage">
     <!-- Navbar -->
-    <% include ../partials/header.ejs %>
+    <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+     <a href="Home.html" class="w3-bar-item"><img style="width:40px;height:40px" src=".\Logo\BKEdu_logo.png" alt="BKEduLogo"></a>
+     <div class="w3-dropdown-hover w3-hide-small">
+       <button class="w3-button" title="Notifications">COURSES <i class="fa fa-caret-down"></i></button>
+       <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+         <a href="#" class="w3-bar-item w3-button Software">Software Development</a>
+         <a href="#" class="w3-bar-item w3-button WebApp">Web Application</a>
+         <a href="#" class="w3-bar-item w3-button Algorithm">Data Structure & Algorithm</a>
+         <a href="#" class="w3-bar-item w3-button DataPro">Data Profession</a>
+         <a href="#" class="w3-bar-item w3-button Graphics">Graphics</a>
+       </div>
+     </div>
+    <a href="/lecturer" class="w3-bar-item w3-button w3-hide-small w3-hover-white">LECTURERS</a>
+ <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ABOUT US</a>
 
       <div class="w3-bar-item search-contrainer">
         <form action="/action_page.php">

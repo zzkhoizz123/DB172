@@ -6,13 +6,13 @@ router.use(express.static(path.join('views/Style')));
 
 router.get('/', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Subject');
+  res.render('pages/Subject', { token: req.cookies.token});
 
 });
 
 router.get('/lesson', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Lesson');
+  res.render('pages/Lesson', { token: req.cookies.token});
 });
 
 

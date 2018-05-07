@@ -4,26 +4,33 @@ const path = require('path');
 
 router.use(express.static(path.join('views/Home')));
 
+/*
+router.use('/*', (req, res, next) => {
+    // middleware find 8 popular courses
+
+    next();
+});
+*/
+
 router.get('/', function (req, res) {
   console.log('Hello World Home');
-  //res.sendFile(path.join('/vHome.html'));
-  res.render('pages/Home');
-  //res.sendFile(path.join('/views/Home/Home.html'));
+  console.log(req.header_data);
+  res.render('pages/Home', { data: req.header_data});
 });
 
 router.get('/about', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/About');
+  res.render('pages/About', { token: req.cookies.token});
 });
 
 router.get('/lecturer', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Lecturer');
+  res.render('pages/Lecturer', { token: req.cookies.token});
 });
 
 router.get('/profile', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Profile');
+  res.render('pages/Profile', { token: req.cookies.token});
 });
 
 module.exports = router;
