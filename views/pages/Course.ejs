@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<title>Subjects-BKEdu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/css/About.css">
+<link rel="stylesheet" href="../Style/css/theme-black.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+  .partners{
+    display: flex;
+    height: auto;
+    background-color: white;
+  }
+  .image-row{
+    padding: 30px 0;
+    margin-left: 200px;
+    float: left;
+    background-color: white;
+  }
+
+  .image-row img{
+    width: 120px;
+  }
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=file], input[type=date], textarea {
+   width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Set a style for all buttons */
+.modal button {
+    position: absolute;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 20px;
+}
+
+.modal .createbtn {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background-color: #4CAF50;
+}
+
+/* Extra styles for the cancel button */
+.modal .cancelbtn {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding: 40px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    position: relative;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+#parent #popup {
+  display: none;
+}
+
+#parent:hover #popup {
+  display: block;
+}
+
+</style>
+<script>
+  var slideIndex = 4;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 4}
+    if (n < 4) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-2].style.display = "block";
+    slides[slideIndex-3].style.display = "block";
+    slides[slideIndex-4].style.display = "block";
+}
+
+function display(txt) {
+   window.event.srcElement.title = txt;
+   window.status = txt;
+ }
+
+ function reset() {
+   window.status = window.defaultStatus;
+ }
+
+
+ // Get the modal
+var modal = document.getElementById('Course_form');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<body id="myPage">
+<!-- Navbar -->
+<% include ../partials/header.ejs %>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+  <a href="#team" class="w3-bar-item w3-button">Team</a>
+  <a href="#work" class="w3-bar-item w3-button">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  <a href="#" class="w3-bar-item w3-button">Search</a>
+</div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Courses</h2>
+<p>choose course if you want</p>
+<div id="parent">
+  <!--
+<a href="/login" class="w3-bar-item w3-left" onclick="alert('You want to add A new course ?');" onmouseover="display('Displaying mouseover!');" onmouseout="reset();">
+  <img src="../Images/add-icon.png" alt="John" style="width:15%" class="w3-circle w3-hover-opacity">
+</a>
+-->
+<button  onclick="document.getElementById('Course_form').style.display='block'" onmouseover="display('Add new course');" style="width:auto;background-color: #4CAF50;position: absolute;right: 20px;color: white;padding: 14px 20px; margin: -70px -10px 50px -10px; border: none; cursor: pointer; font-size: 20px;"><i class="fas fa-plus" style="font-size:20px"></i></button>
+</div>
+
+<div id="Course_form" class="modal">
+
+  <form class="modal-content animate" action="/course" method="POST">
+
+    <div class="container">
+      <label for="Coname"><b>Course name</b></label>
+      <input type="text" placeholder="Enter Coursename" name="Coname" required>
+
+      <label for="Des"><b>Describe</b></label>
+      <textarea id="description" name="Des" placeholder="Write something.." style="height:200px" required></textarea>
+
+      <label for="Img"><b>Imagine</b></label>
+      <input type="file" name="fileToUpload" id="fileToUpload" required>
+      <br>
+      <label for="StartDate"><b>Create Date</b></label>
+      <input type="date" name="StartDate" value="" required>
+
+      <label for="Commitment"><b>Commitment</b></label>
+      <input type="text" name="Commitment" placeholder="Enter Commitment" required>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="submit" class="createbtn">Create</button>
+      <button type="button" onclick="document.getElementById('Course_form').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+
+<div class="w3-row"><br>
+<table class="w3-table">
+
+<%for(var i = 0; i < somecourses.length; i = i + 4){%>
+  <tr>
+  <%for(var j = 0; j < 4; j++){%>
+    <%if(somecourses[i + j]){%>
+      <th>
+      <div class="card">
+        <img src=<%=somecourse[i+j].ImageLink%> alt="John" style="width:60%">
+        <h1><%=somecourses[i+j].Name%></h1>
+        <p class="title"><%=somecourses[i+j].CreateDate%></p>
+        <a href="#"><h5><%=somecourses[i+j].Teacher_ID%></h5></a>
+        <%lessonlink = "/lesson?courseid=" + somecourse[i+j].Course_ID + "&classid=1"%>
+          <%if(data.isTeacher == 0){%>
+          <a href=<%=lessonlink%>><p><button>JOIN</button></p></a>
+          <%}else{%>
+          <a href=<%=lessonlink%>><p><button>UPDATE</button></p></a>
+          <%}%>
+      </div>
+      </th>
+    <%}%>
+  <%}%>
+  </tr>
+<%}%>
+
+</table>
+</div>
+</div>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-google-plus-g"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fab fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <div class="cat-columns">
+
+    <div class="menu">
+      <ul>
+        <li class="plain">Courses</li>
+        <li><a href="#">Software Development</a></li>
+        <li><a href="#">Web Application</a></li>
+        <li><a href="#">Data Structure & Algorithm</a></li>
+        <li><a href="#">Data Profession</a></li>
+        <li><a href="#">Graphics</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Support</li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+      <ul>
+        <li class="plain">Company</li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Teach</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+</html>

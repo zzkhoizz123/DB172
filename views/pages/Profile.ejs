@@ -177,7 +177,7 @@
       label.sexradio{
         display: inline;
         width: auto;
-        margin: 0 10px 20px 0;
+        margin: 0 -90px 20px -50px;
         font-weight: normal !important;
       }
 
@@ -206,17 +206,18 @@
         border-color: #009933;
       }
 
-      .sfbtn_submit, .sfbtn_cancel, .updfield_btn, .updcancle_btn {
+       .sfbtn_submit, .sfbtn_cancel, .updfield_btn, .updcancle_btn {
         display: inline-block;
         padding: 0 10px;
         border-radius: 20px;
         font-size: 14px;
         line-height: 23px;
-        margin-left: 3px;
+        margin-left: 100px;
         transition: all 0.5s ease 0s;
         border-width: 2px;
         border-style: solid;
       }
+
 
       .sfbtn_cancel, .updcancle_btn {
         background-color: #555;
@@ -358,13 +359,14 @@
          <div class="attribute-element">
            <label>Full name:</label>
            <div class="infotext" style="overflow:hidden; word-wrap: break-word;">
-                 <%=user_info.Name%>
+                 <%=user_info.Username%>
            </div>
          </div>
          <div class="attribute-element">
            <label>Birthday:</label>
            <div class="infotext">
-             <%=user_info.DoB%>
+             01/01/1990
+            <!-- <%=user_info.DoB%> -->
            </div>
          </div>
          <div class="attribute-element">
@@ -430,11 +432,16 @@
              <div class="attribute-element">
                <label>Sex:</label>
                <div class="infotext">
-                 <label class="sexradio"><input tabindex="5" name="gender" type="radio" checked="" value="1"> Male</label>
-                 <label class="sexradio"><input tabindex="6" name="gender" type="radio" value="0"> Female</label>
-                 <label class="sexradio"><input tabindex="7" name="gender" type="radio" value="2"> Other</label>
+                 <table style="width:100%">
+                 <tr>
+                 <th><label class="sexradio"><input tabindex="5" name="gender" type="radio" checked="" value="1"> Male</label></th>
+                 <th><label class="sexradio"><input tabindex="6" name="gender" type="radio" value="0"> Female</label></th>
+                 <th><label class="sexradio"><input tabindex="6" name="gender" type="radio" value="0"> Other</label></th>
+               </tr>
+             </table>
                </div>
              </div>
+
              <div class="attribute-element">
                <label>Country:</label>
                <div class="infotext">
@@ -703,8 +710,8 @@
                </div>
              </div>
              <p class="subform_btn">
-               <a tabindex="10" href="javascript:void(0)" onclick="updatePersonal()" class="sfbtn_submit">Update</a>
-               <a tabindex="11" href="javascript:void(0)" onclick="hidePersonalEdit()" class="sfbtn_cancel">Cancel</a>
+               <a tabindex="10" href="/" onclick="updatePersonal()" class="scfbtn_submit">Update</a>
+               <a tabindex="11" href="/" onclick="hidePersonalEdit()" class="sfbtn_cancel">Cancel</a>
              </p>
            </div>
          </form>
@@ -727,12 +734,13 @@
          <div class="attribute-element">
            <label>Password:</label>
            <div class="infotext">
-             ********
+             <input type="password" value=<%=user_password%> id="myInput"><br><br>
+             <input type="checkbox" onclick="myFunction()">Show Password
            </div>
          </div>
        </div>
        <div id="PasswordEdit" style="position: relative; display: none">
-         <form id="frmPersonal" name="frmRegister" action onsubmit="return updatePersonal();" method="post">
+         <form  action="/profile/reset_password" id="frmPersonal" name="frmRegister" action onsubmit="return updatePersonal();" method="post">
            <div class="subcont">
              <div class="attribute-element">
                <label>Current Password</label>
@@ -743,24 +751,24 @@
              <div class="attribute-element">
                <label>New Password</label>
                <div class="infotext">
-                 <input type="password" name="newpsw" class="subform_input updtinput">
+                 <input type="password" name="newpsw" class="subform_input updtinput" id="newpsw">
                </div>
              </div>
              <div class="attribute-element">
                <label>Retype Password</label>
                <div class="infotext">
-                 <input type="password" name="repsw" class="subform_input updtinput">
+                 <input type="password" name="repsw" class="subform_input updtinput" id="repsw">
                </div>
              </div>
+             <button type="submit" class="sfbtn_cancel" class="submit">Update</button>
              <div class="subform_btn">
-               <a href="#" onclick="resetPW()" class="sfbtn_submit">Update</a>
+              <!-- <a href="/profile/reset_password" onclick="checkRetype()" class="sfbtn_submit">Update</a>-->
                <a href="#" onclick="hideAccountEdit()" class="sfbtn_cancel">Cancel</a>
              </div>
            </div>
          </form>
 
        </div>
-
        </div>
      </div>
      <div id="History" class="tabcontent" style="display:none">
@@ -806,5 +814,27 @@
         <i class="fa fa-chevron-circle-up"></i></span></a>
       </div>
     </footer>
+
+
+
+    <script>
+    function checkRetype(){
+        var newpsw = document.getElementById("newpsw");
+        var repsw = document.getElementById("repsw");
+        if(newpasw.value != repsw.value ){
+            alert("new password and retype password are not fit !!!");
+        }
+    }
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    </script>
+
   </body>
 </html>

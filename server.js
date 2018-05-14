@@ -5,9 +5,9 @@ const path = require('path');
 //let router = express.Router();
 var homerouter = require('./router/home.js');
 var loginrouter = require('./router/login.js');
-var subjectrouter = require('./router/subject.js');
+var courserouter = require('./router/course.js');
 var profilerouter = require('./router/profile.js');
-
+var lessonrouter = require('./router/lesson.js');
 
 let app = express();
 
@@ -31,10 +31,19 @@ app.use('/*', (req, res, next) => {
     res.cookie('userID', null);
     res.cookie('name', null);
     res.cookie('image', null);
+    res.cookie('isTeacher', null);
+
+
+    res.cookie('courseid', null);
+    res.cookie('classid', null);
+    res.cookie('somecourses', null);
+    res.cookie('yourcourse', null);
+
     console.log(req.cookies);
 
   //  console.log(req.header_data.token);
     req.header_data = {};
+    req.body_data = {};
 
     next();
   }
@@ -46,6 +55,18 @@ app.use('/*', (req, res, next) => {
     req.header_data.name = req.cookies.name;
     req.header_data.userID = req.cookies.userID;
     req.header_data.token = req.cookies.token;
+    req.header_data.isTeacher = req.cookies.isTeacher;
+
+    req.body_data = {};
+    req.body_data.courseid = req.cookies.courseid;
+    req.body_data.classid = req.cookies.classid;
+    req.body_data.somecourses = req.cookies.somecourses;
+    req.body_data.yourcourse = req.cookies.yourcourse;
+
+  //  req.packet.header_data = {};
+  //  req.packet.user = [];
+  //  req.packet.body = {};
+
     next();
   }
 });
@@ -56,9 +77,10 @@ app.use('/*', (req, res, next) => {
     next();
 });
 
-app.use('/subject', subjectrouter);
+app.use('/course', courserouter);
 app.use('/login', loginrouter);
 app.use('/profile', profilerouter);
+app.use('/lesson', lessonrouter);
 app.use('/', homerouter);
 
 app.all('/*', (req, res) => {

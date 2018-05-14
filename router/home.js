@@ -13,24 +13,23 @@ router.use('/*', (req, res, next) => {
 */
 
 router.get('/', function (req, res) {
-  console.log('Hello World Home');
   console.log(req.header_data);
   res.render('pages/Home', { data: req.header_data});
 });
 
 router.get('/about', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/About', { token: req.cookies.token});
+  res.render('pages/About', { data: req.header_data});
 });
 
 router.get('/lecturer', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Lecturer', { token: req.cookies.token});
+  res.render('pages/Lecturer', { data: req.header_data});
 });
 
 router.get('/profile', function (req, res) {
   //console.log('Hello World Home');
-  res.render('pages/Profile', { token: req.cookies.token});
+  res.render('pages/Profile', { data: req.header_data});
 });
 
 module.exports = router;

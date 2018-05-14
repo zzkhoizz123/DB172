@@ -11,7 +11,7 @@
 
 <body>
 
-  <p class="tip">Click on button in image container</p>
+  <p class="tip"><%=message%></p>
 
     <div class="cont">
             <div class="form sign-in">
@@ -66,6 +66,13 @@
       <label>
         <span>Password</span>
         <input type="password" name="userPassword" />
+      </label>
+      <label>
+        <span>Authorise</span>
+
+        <label for="lecturer"> lecturer</label>
+        <input type="radio" name="isTeacher" id="lecturer" value="Lecturer"><br>
+
       </label>
       </form>
       <button type="submit" class="submit" form="reg_form">Sign Up</button>

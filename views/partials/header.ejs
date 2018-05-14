@@ -9,7 +9,7 @@
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
 
         <% var route1 = "/login/" + "cookies"%>
-        <% var route2 = "/subject"%>
+        <% var route2 = "/course" %>
       <a href=<%=route1%> class="w3-bar-item w3-button Software">Software Development</a>
       <a href=<%=route2%> class="w3-bar-item w3-button WebApp">Web Application</a>
       <a href="#" class="w3-bar-item w3-button Algorithm">Data Structure & Algorithm</a>
@@ -23,13 +23,13 @@
 
   <div class="w3-bar-item search-contrainer">
     <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
+      <input type="text" style="width: 74%;" placeholder="Search.." name="search">
       <button type="submit">
       <i class="fa fa-search"></i>
       </button>
     </form>
   </div>
-
+ 
   <% if(data.token != 'j:null' && data.token != null){%>
     <div class="w3-dropdown-hover w3-hide-small" style="position:absolute; right:60px;">
           <div class="w3-col s4" style="margin-top: 5px;">
